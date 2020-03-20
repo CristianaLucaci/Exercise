@@ -1,7 +1,6 @@
 package loose.oose.fis;
 
 import loose.oose.fis.documents.Document;
-import loose.oose.fis.documents.JSON;
 import loose.oose.fis.documents.XML;
 import loose.oose.fis.processors.Procesor;
 import loose.oose.fis.processors.ProcesorCautare;
@@ -18,8 +17,7 @@ public class Main {
         xmlList[1] = "text1";
         xmlList[2] = "</tag1>";
         xmlList[3] = "<tag2>";
-        xmlList[4] = "text2";
-        xmlList[5] = "</tag2>";
+
 
         Document xml = new XML(xmlList);
 
@@ -27,8 +25,10 @@ public class Main {
         documente.add(xml);
 
         Procesor c1 = new ProcesorCautare("text1");
-        Procesor c2 = new ProcesorCautare("text3");
+        Procesor c2 = new ProcesorCautare("text4");
         Procesor c3 = new ProcesorCautare("text2");
+        Procesor c4 = new ProcesorCautare("text3");
+
 
         ProcesorCompus pc1 = new ProcesorCompus();
         pc1.adaugaProcesor(c1);
